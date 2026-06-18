@@ -1,0 +1,160 @@
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+background:#060809;
+font-family:Arial, Helvetica, sans-serif;
+overflow:hidden;
+}
+
+.game-container{
+position:relative;
+height:100vh;
+display:flex;
+justify-content:center;
+}
+
+.game-area{
+width:440px; 
+height:100vh;
+background:#2c3e50; 
+position:relative;
+overflow:hidden;
+border-left:20px solid #27ae60; 
+border-right:20px solid #27ae60; 
+box-shadow: inset 5px 0 0 white, inset -5px 0 0 white; 
+}
+
+.score{
+position:absolute;
+top:20px;
+left:40px;
+background:#f1c40f;
+width:200px;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+text-align:center;
+border-radius:8px;
+z-index:2;
+}
+
+.start-screen{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:#e74c3c;
+color:white;
+padding:30px;
+text-align:center;
+border-radius:10px;
+cursor:pointer;
+z-index:10;
+width:350px;
+}
+
+.start-screen p{
+margin-bottom:10px;
+font-size:18px;
+}
+
+.start-screen p:first-child{
+font-size:28px;
+font-weight:bold;
+}
+
+/* ----------------------------- */
+/* New Countdown Styling         */
+/* ----------------------------- */
+.countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    z-index: 20;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+
+.hide{
+display:none;
+}
+
+/* Player Car - Pure CSS */
+.car {
+    width: 60px;
+    height: 100px;
+    position: absolute;
+    bottom: 120px;
+    background: #3498db; 
+    border-radius: 12px;
+    box-shadow: inset 5px 0 10px rgba(0,0,0,0.4), inset -5px 0 10px rgba(0,0,0,0.4);
+}
+
+.car::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 20%;
+    background: #111; 
+    border-radius: 5px 5px 0 0;
+}
+
+.car::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    width: 80%;
+    height: 15%;
+    background: #111; 
+    border-radius: 0 0 5px 5px;
+}
+
+/* Enemy Cars - Pure CSS */
+.enemy {
+    width: 50px;
+    height: 90px;
+    background: #e67e22; 
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: inset 5px 0 10px rgba(0,0,0,0.3), inset -5px 0 10px rgba(0,0,0,0.3);
+}
+
+.enemy::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 20%;
+    background: #2c3e50; 
+    border-radius: 5px 5px 0 0;
+}
+
+.enemy::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    width: 80%;
+    height: 15%;
+    background: #2c3e50; 
+    border-radius: 0 0 5px 5px;
+}
+
+/* Road Lines */
+.line{
+width:10px;
+height:100px;
+background:white;
+position:absolute;
+}
